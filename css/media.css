@@ -1,0 +1,92 @@
+html {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*SMARTPHONES*/
+@media screen and (max-width: 499px) {
+    .container {
+        padding-left: 10px;
+    }
+    body {
+        background: black;
+    }
+    h1 {
+        font-size: 16px;
+        padding-left: 55px;
+    }
+    .data {
+        color: white;
+        padding-left: 0;
+        font-size: 14px;
+    }
+    .timer {
+        margin: 0 10px;
+    }
+    .foot {
+        color: white;
+        padding-top: 170px;
+    }
+    .showSlide1 {
+        background: url("../img/darth.jpg");
+        background-position: center;
+    }
+    .deck {
+        width: 320px;
+    }
+    .deck .card {
+        height: 50px;
+        width: 50px;
+    }
+    .contentBox1 {
+        color: red;
+    }
+    .contentBox2 {
+        color: red;
+    }
+}
+
+/*IPADS*/
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .container {
+        padding-left: 30px;
+    }
+    body {
+        background: black;
+    }
+    h1 {
+        font-size: 30px;
+        padding-left: 140px;
+    }
+    .data {
+        color: white;
+        padding-left: 80px;
+        font-size: 26px;
+    }
+    .timer {
+        margin: 0 10px;
+    }
+    .foot {
+        color: white;
+        padding-top: 140px;
+    }
+    .showSlide1 {
+        background: url("../img/darth.jpg") no-repeat;
+        background-position: center;
+    }
+    .deck {
+        width: 700px;
+        height: 700px;
+    }
+    .deck .card {
+        height: 130px;
+        width: 130px;
+    }
+    .contentBox1 {
+        color: red;
+    }
+    .contentBox2 {
+        color: red;
+    }
+}

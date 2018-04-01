@@ -1,0 +1,308 @@
+html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: url("../img/mind.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+/*HEADER*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    padding-left: 130px;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    padding-left: 135px;
+    color: orange;
+    text-transform: uppercase;
+}
+
+/*ADD: status panel style*/
+.data {
+    text-align: left;
+    padding-left: 80px;
+}
+
+.data .stars {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+
+.data .stars li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.data .restart {
+    float: right;
+    cursor: pointer;
+}
+
+.fa-star {
+    color: #FFD700;
+}
+
+.timer {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.restart {
+    font-weight: bold;
+}
+
+/*CONTENT*/
+
+/*ADD: deck style*/
+.deck {
+    width: 600px;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.deck .card {
+    align-items: center;
+    height: 125px;
+    width: 125px;
+    margin: 5px;
+    background: black;
+    font-size: 0;
+    color: white;
+    border-radius: 15px;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: black;
+    cursor: default;
+    animation-name: flip;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-animation-name: flip;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.deck .card.show {
+    font-size: 40px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: lawngreen;
+    font-size: 40px;
+    -webkit-animation-name: tada;
+    animation-name: tada;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.deck .card.unmatched {
+    -webkit-animation-name: shake;
+    animation-name: shake;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    background: orange;
+}
+
+.deck .card.disabled {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/*POPUP & FOOTER*/
+
+/*ADD: Styles for congratulations popup*/
+.slide {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.slide:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.showSlide1 {
+    border-radius: 15px;
+    border-top: 2px solid;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: 'Montserrat', sans-serif;
+    height: 50%;
+    margin: 70px auto;
+    padding: 20px;
+    position: relative;
+    transition: all 5s ease-in-out;
+    width: 100%;
+}
+
+.contentBox1 {
+    padding-top: 35px;
+    font-size: 24px;
+}
+
+.contentBox2 {
+    padding-top: 35px;
+    padding-bottom: 25px;
+}
+
+.father {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button {
+    margin-top: 30px;
+}
+
+.showSlide1 .contentBox1,
+.contentBox2 {
+    max-height: 50%;
+    overflow: auto;
+    text-align: center;
+}
+
+.show {
+    visibility: visible;
+    opacity: 100;
+}
+
+#starRating li {
+    display: inline-block;
+}
+
+#playAgain {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 15px;
+}
+
+.foot {
+    font-size: 14px;
+    padding-top: 60px;
+}
+
+/*KEYFRAMES*/
+
+/* ADD: animations keyframes style */
+@-webkit-keyframes flip {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    40% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    50% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    80% {
+        -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+        transform: perspective(400px) scale3d(.95, .95, .95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+
