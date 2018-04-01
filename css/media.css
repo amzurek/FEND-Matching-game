@@ -5,12 +5,64 @@ html {
 }
 
 /*SMARTPHONES*/
+
+@media screen and (min-width: 319px) and (max-width: 498px) {
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background: black;
+        margin: auto;
+        padding: 0;
+    }
+    h1 {
+        font-size: 14px;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .data {
+        color: white;
+        padding-left: 0;
+        font-size: 14px;
+    }
+    .timer {
+        margin: 0 5px;
+    }
+    .foot {
+        color: white;
+        padding-top: 200px;
+    }
+    .showSlide1 {
+        background: url("../img/darth.jpg");
+        background-position: center;
+    }
+    .deck {
+        max-width: 290px;
+        padding: 8px;
+    }
+    .deck .card {
+        height: 45px;
+        width: 45px;
+    }
+    .contentBox1 {
+        color: red;
+    }
+    .contentBox2 {
+        color: red;
+    }
+    .data .stars li {
+        padding-right: 5px;
+    }
+}
+
 @media screen and (max-width: 499px) {
     .container {
         padding-left: 10px;
     }
     body {
         background: black;
+        margin: auto;
     }
     h1 {
         font-size: 16px;
@@ -33,11 +85,11 @@ html {
         background-position: center;
     }
     .deck {
-        width: 320px;
+        max-width: 320px;
     }
     .deck .card {
-        height: 50px;
-        width: 50px;
+        height: 65px;
+        width: 65px;
     }
     .contentBox1 {
         color: red;

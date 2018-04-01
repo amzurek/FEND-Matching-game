@@ -1,8 +1,8 @@
 /*ADD: display the cards on the page, hold list*/
 var card = document.getElementsByClassName('card');
 var cards = [...card];
-var deck = document.getElementById('deckCards');
 var counter = document.querySelector('.moves');
+var deck = document.getElementById('deckCards');
 var moves = 0;
 var matchedCard = document.getElementsByClassName('match');
 var modal = document.getElementById('showSlide');
@@ -30,7 +30,6 @@ document.body.onload = startGame();
 function startGame() {
     cards = shuffle(cards);
     for ( var i = 0; i < cards.length; i++ ) {
-        deck.innerHTML = '';
         [].forEach.call(cards, function(item) {
             deck.appendChild(item);
         });
@@ -110,7 +109,7 @@ function unmatched() {
 function disable() {
     Array.prototype.filter.call(cards, function(card) {
         card.classList.add('disabled');
-    })
+    });
 }
 
 /*ADD: enable cards and disable matched cards*/
@@ -120,7 +119,7 @@ function enable() {
         for(var i = 0; i < matchedCard.length; i++) {
             matchedCard[i].classList.add('disabled');
         }
-    })
+    });
 }
 
 /*ADD: count moves, start timer after first click*/
