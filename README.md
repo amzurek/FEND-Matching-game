@@ -16,6 +16,8 @@ When you find 8 pairs you will see statistic of your game.
 5. The game is over when all the cards have been matched.
 6. The player with the best time wins.
 
+You want to play? Click here: https://amzurek.github.io/FEND-Matching-game/
+
 **CHALLENGE ACCEPTED?**
 
 ##License
