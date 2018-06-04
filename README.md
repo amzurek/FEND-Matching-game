@@ -46,11 +46,6 @@ SOFTWARE.
 
 and (https://www.pinterest.co.uk/pin/554787247829455784/?autologin=true).
 
-### Table of Contents
-
-* [Instructions](#instructions)
-* [Contributing](#contributing)
-
 ### Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
