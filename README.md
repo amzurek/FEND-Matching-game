@@ -1,26 +1,26 @@
-#MEMORY GAME
+# MEMORY GAME
 
-##About
+## About
 
 Simple game to test users memory. There are 16 cards and 8 pairs of the same icons. You must find all pairs.
 Try to be the best!
 
 When you find 8 pairs you will see statistic of your game.
 
-##Instructions
+## Instructions
 
-1. Cards will mix automatic.
-2. Turn over any two cards.
-3. If the two cards match, they will keep and light on green color.
-4. Remember what was on each card and where it was.
-5. The game is over when all the cards have been matched.
-6. The player with the best time wins.
+1.Cards will mix automatic.
+2.Turn over any two cards.
+3.If the two cards match, they will keep and light on green color.
+4.Remember what was on each card and where it was.
+5.The game is over when all the cards have been matched.
+6.The player with the best time wins.
 
 You want to play? Click here: https://amzurek.github.io/FEND-Matching-game/
 
 **CHALLENGE ACCEPTED?**
 
-##License
+## License
 
 Copyright 2018 by amzurek
 
