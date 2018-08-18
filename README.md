@@ -16,7 +16,7 @@ When you find 8 pairs you will see statistic of your game.
 5.The game is over when all the cards have been matched.
 6.The player with the best time wins.
 
-You want to play? Click here: https://amzurek.github.io/FEND-Matching-game/
+You want to play? Click here: https://amzurek.github.io/Matching-game/
 
 **CHALLENGE ACCEPTED?**
 
@@ -45,9 +45,3 @@ SOFTWARE.
 **Background was take from [Free Desktop Wallpapers](https://desktopwalls.net/funny/star-wars-darth-vader-orange-juice-minimalistic-desktop-wallpaper)
 
 and (https://www.pinterest.co.uk/pin/554787247829455784/?autologin=true).
-
-### Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
